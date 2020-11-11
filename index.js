@@ -45,15 +45,13 @@ Implement a higher-order function called `getYears` that accepts the callback fu
 
 function getYears(getFinalsCB) {
     const finals = getFinals()
-    const finalYears = [];
-
-    finals.forEach(function(item){
-        finalYears.push(item["Year"])
+    const year = finals.map(function(item){
+        return item.Year
     })
-    return finalYears
+    return year
 }
 
-console.log("Task 3:", getYears(getFinals));
+console.log("Task 3:", getYears(getFinals()));
 
 
 
